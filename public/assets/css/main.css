@@ -1,0 +1,483 @@
+.phone-container {
+    display: flex;
+    flex-direction: row;
+    /* Align children horizontally */
+    gap: 15px;
+    /* Add space between dropdown and phone input */
+    align-items: center;
+    /* Vertically center align items */
+}
+
+.dropdown {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.phone-input-wrapper {
+    position: relative;
+    width: 300px;
+    /* Adjust width as needed */
+}
+
+.phone-number {
+    width: 100%;
+    padding-left: 70px;
+    /* Reserve space for calling code */
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.phone-number::placeholder {
+    color: #aaa;
+}
+
+.phone-number:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.calling-code-display {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    pointer-events: none;
+    margin-top: 5px;
+}
+
+.divider {
+    position: absolute;
+    top: 12px;
+    left: 65px;
+    height: 40px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+/* General styles (no changes here) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* back button */
+
+.back-button-container {
+    position: absolute;
+    top: 25px;
+    /* Adjust based on your layout */
+    left: 80px;
+    /* Adjust based on your layout */
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    /* Small font */
+    font-weight: 500;
+    /* Semi-bold text */
+    transition: color 0.3s ease;
+    color: black;
+}
+
+.back-button:hover {
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+
+
+.phone-container input {
+    flex: 1;
+}
+
+#callingCode {
+    width: 80px;
+    /* Adjust width of the calling code field */
+    text-align: center;
+}
+
+#phoneNumber {
+    flex: 2;
+    /* Makes the phone number field take up more space */
+}
+
+#countryDropdown {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+/* Phone number input field styling */
+.phone-container .number {
+    flex: 3;
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background: #eef6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    width: 75%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 100px;
+}
+
+.left {
+    flex: 1;
+    padding: 40px 79px 80px;
+    background: #eef6f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.left img {
+    width: 323px;
+    margin-bottom: 20px;
+}
+
+.left h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.left p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.right {
+    width: 95%;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.right h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.google-btn {
+    background: #4285F4;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.google-btn img {
+    height: 18px;
+    margin-right: 10px;
+}
+
+.form-title {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    margin: 10px 0;
+}
+
+form {
+    width: 100%;
+}
+
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 56px;
+    width: 369px;
+    margin-top: 10px;
+}
+
+.form_group-country input {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    border: 1px solid #cac3c3;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    border: 1px solid #cac3c3;
+    border-radius: 0px;
+    padding-left: 4px;
+    margin-top: 10px;
+}
+
+
+.form-group select {
+    width: 100%;
+    /* padding: 13px; */
+    font-size: 14px;
+    border: 1px solid #cac3c3;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #218838;
+}
+
+.form-footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+.form-footer a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.css-5fs0b8 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 28px;
+    color: rgb(0, 0, 50);
+    margin-top: 5px;
+    margin-bottom: 9px;
+}
+
+
+.or-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.or-separator .line {
+    width: 140px;
+    /* Adjust width if needed */
+    border: none;
+    border-top: 1px solid #ccc;
+    /* Adjust color if needed */
+    margin: 0;
+}
+
+.or-separator .or-text {
+    margin: 0 15px;
+    /* Add horizontal space between text and lines */
+    font-weight: bold;
+    color: #555;
+    /* Adjust color if needed */
+    font-size: 14px;
+    /* Adjust size if needed */
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 193px;
+    /* Adds some space between the checkbox and label */
+    font-size: 10px;
+    /* Adjust text size if needed */
+}
+
+.terms-container input[type="checkbox"] {
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-right: -178px;
+}
+
+#countryDropdown {
+    width: 100px;
+    height: 45px;
+}
+
+.form-control {
+    border: 1px solid #000000;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+ @media (max-width: 922px) {
+    /* .container {
+        flex-direction: column;
+        box-shadow: none;
+    } */
+
+    .container {
+        display: flex;
+        width: 94%;
+        max-width: 1200px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+
+    .left,
+    .right {
+        padding: 20px;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .left img {
+        margin: 0 auto 20px;
+    }
+
+    .left h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+
+    .right h2 {
+        font-size: 20px;
+    }
+
+    .google-btn {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    /* .container {
+        display: flex;
+        width: 94%;
+        max-width: 1200px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0;
+        margin-top: 50px;
+    } */
+
+    .left h3 {
+        font-size: 16px;
+    }
+
+    .left p {
+        font-size: 12px;
+    }
+
+    .right h2 {
+        font-size: 18px;
+    }
+
+    .google-btn {
+        font-size: 11px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .form-footer {
+        font-size: 10px;
+    }
+} 
